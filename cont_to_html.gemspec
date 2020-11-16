@@ -8,6 +8,6 @@ Gem::Specification.new do |spec|
   spec.description   = 'gem pushing string to html fil'
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = 'MIT'
-  spec.files         = ["lib/fourtytwo.rb"]
+  spec.files         = ["lib/cont_to_html.rb"]
   spec.homepage      =  'https://rubygems.org/'
 end
