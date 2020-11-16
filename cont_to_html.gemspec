@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'cont_to_html'
-  spec.version       = '0.0.7'
+  spec.version       = '0.0.10'
   spec.date          = '2020-11-16'
   spec.summary       = 'content to html'
   spec.authors       = ['OleksiiVlasenko']
