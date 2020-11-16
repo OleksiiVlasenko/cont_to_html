@@ -1,6 +1,6 @@
 require 'nokogiri'
 
-class Conten_to_html
+class ContenToHtml
 
   def create_html(content, filename = 'index.html')
     file = File.new("#{Dir.pwd}/#{filename}", "w+")
