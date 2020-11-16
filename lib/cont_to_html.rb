@@ -1,7 +1,10 @@
 require 'nokogiri'
 
 class ContenToHtml
-  def create_html(content, filename = 'index.html')
+  def create_html(content, bypass_html, filename = 'index.html')
+    res = content.gsub!(/[<>]/, '') if bypass_html == false
+    res = content unless bypass_html == false
+
     file = File.new("#{Dir.pwd}/#{filename}", "w+")
     file.puts "<!DOCTYPE html>"
     file.puts "<html lang=""en"">"
@@ -10,7 +13,7 @@ class ContenToHtml
     file.puts "    <title>Гра Тамагочі from RubyCops</title>"
     file.puts "  </head>"
     file.puts "  <body>"
-    file.puts "      #{content}"
+    file.puts "      #{res}"
     file.puts "  </body>"
     file.puts "</html>"
     file.close
