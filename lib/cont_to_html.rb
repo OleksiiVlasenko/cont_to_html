@@ -21,6 +21,10 @@ class ContenToHtml
     file.close
   end
 
+  def open_html(file = 'index.html')
+    system("xdg-open #{Dir.pwd}/#{file}")
+  end
+
   def update(content, filename = 'index.html')
     look_for     = "<body>"
     replace_with = "
