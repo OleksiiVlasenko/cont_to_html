@@ -1,8 +1,7 @@
-require 'nokogiri'
 
 class ContenToHtml
   def create_html(content, bypass_html, filename = 'index.html')
-    res = content.gsub!(/[<>]/, '') if bypass_html == false
+    res = content.gsub!(/[<>]/, '') if bypass_html == false #kill all <>
     res = content unless bypass_html == false
 
     file = File.new("#{Dir.pwd}/#{filename}", "w+")
@@ -13,7 +12,7 @@ class ContenToHtml
     file.puts "    <title>Гра Тамагочі from RubyCops</title>"
     file.puts "  </head>"
     file.puts "  <script>"
-    file.puts "   setInterval(()=>{window.location.reload()}, 2000)"
+    file.puts "   setInterval(()=>{window.location.reload()}, 1500)"
     file.puts "</script>"
     file.puts "  <body>"
     file.puts "      #{res}"
